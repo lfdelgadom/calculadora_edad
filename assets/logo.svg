@@ -1,1 +1,23 @@
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Logo de Calculadora de Edad</title>
+  <desc id="desc">Calendario violeta con un reloj naranja.</desc>
+  <defs>
+    <linearGradient id="calendar" x1="16" y1="12" x2="99" y2="105" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="clock" x1="65" y1="63" x2="109" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <rect x="11" y="19" width="86" height="80" rx="18" fill="url(#calendar)"/>
+  <path d="M11 43h86" stroke="#fff" stroke-width="8" opacity=".92"/>
+  <path d="M34 13v17M74 13v17" stroke="#211F3A" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="35" cy="62" r="6" fill="#fff" opacity=".92"/>
+  <circle cx="56" cy="62" r="6" fill="#fff" opacity=".92"/>
+  <circle cx="35" cy="82" r="6" fill="#fff" opacity=".92"/>
+  <circle cx="56" cy="82" r="6" fill="#fff" opacity=".92"/>
+  <circle cx="87" cy="86" r="25" fill="url(#clock)" stroke="#fff" stroke-width="5"/>
+  <path d="M87 72v15l10 7" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
