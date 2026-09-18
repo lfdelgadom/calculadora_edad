@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calcula tu edad exacta, días vividos y próximo cumpleaños.">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Calculadora de Edad</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#calculadora">Saltar a la calculadora</a>
+  <main class="app-shell" id="calculadora">
+    <section class="app-card" aria-labelledby="app-title">
+      <header class="app-header">
+        <img class="app-logo" src="assets/logo.svg" alt="">
+        <div>
+          <p class="eyebrow">Tiempo, fechas y celebraciones</p>
+          <h1 id="app-title">Calculadora de Edad</h1>
+          <p class="intro">Selecciona tu fecha de nacimiento para conocer tu edad exacta y descubrir datos especiales sobre tu próximo cumpleaños.</p>
+        </div>
+      </header>
+
+      <form id="age-form" novalidate>
+        <div class="field-group">
+          <label for="birth-date">Fecha de nacimiento</label>
+          <div class="date-row">
+            <input type="date" id="birth-date" name="birth-date" required aria-describedby="date-help date-error">
+            <button class="button button--primary" type="submit">
+              <span aria-hidden="true">⌛</span> Calcular edad
+            </button>
+            <button class="button button--secondary" type="button" id="clear-button">
+              <span aria-hidden="true">↺</span> Limpiar
+            </button>
+          </div>
+          <p class="field-help" id="date-help">Usamos la fecha actual de tu dispositivo. No almacenamos ningún dato.</p>
+          <p class="error-message" id="date-error" role="alert" aria-live="assertive"></p>
+        </div>
+      </form>
+
+      <section class="results" id="results" aria-labelledby="result-heading" aria-live="polite" hidden>
+        <div class="birthday-banner" id="birthday-banner" role="status" hidden>
+          <span aria-hidden="true">🎉</span>
+          <strong>¡Feliz cumpleaños!</strong> Hoy es un gran día para celebrar.
+          <span aria-hidden="true">🎂</span>
+        </div>
+
+        <article class="hero-result">
+          <span class="hero-icon" aria-hidden="true">⏳</span>
+          <div>
+            <h2 id="result-heading">Tu edad actual</h2>
+            <p id="exact-age" class="exact-age"></p>
+          </div>
+        </article>
+
+        <div class="result-grid">
+          <article class="result-card">
+            <span class="result-icon" aria-hidden="true">🗓️</span>
+            <h3>Meses completos</h3>
+            <p id="total-months"></p>
+          </article>
+          <article class="result-card">
+            <span class="result-icon" aria-hidden="true">☀️</span>
+            <h3>Días vividos</h3>
+            <p id="total-days"></p>
+          </article>
+          <article class="result-card">
+            <span class="result-icon" aria-hidden="true">🎂</span>
+            <h3>Próximo cumpleaños</h3>
+            <p id="next-birthday"></p>
+            <small id="days-until"></small>
+          </article>
+          <article class="result-card">
+            <span class="result-icon" aria-hidden="true">📅</span>
+            <h3>Día de nacimiento</h3>
+            <p id="birth-weekday"></p>
+          </article>
+          <article class="result-card result-card--accent">
+            <span class="result-icon" aria-hidden="true">✨</span>
+            <h3>Signo zodiacal</h3>
+            <p id="zodiac-sign"></p>
+          </article>
+        </div>
+      </section>
+    </section>
+    <footer>Hecha para celebrar cada etapa de tu historia.</footer>
+  </main>
+</body>
+</html>
